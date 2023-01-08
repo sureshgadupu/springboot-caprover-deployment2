@@ -11,11 +11,10 @@ FROM adoptopenjdk/openjdk11:jdk-11.0.16.1_1-slim as build
 COPY mvnw .
 COPY .mvn .mvn
 COPY pom.xml .
-COPY check-style.xml .
 COPY src src
 RUN chmod a+rx mvnw
 RUN ./mvnw clean
-RUN ./mvnw package -DskipTests -Dcheckstyle.skip=true
+RUN ./mvnw package -DskipTests
 
 FROM adoptopenjdk/openjdk11:jdk-11.0.16.1_1-slim
 COPY --from=build "./target/*.jar" /app.jar
