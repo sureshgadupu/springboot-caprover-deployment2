@@ -1,4 +1,4 @@
-# syntax = docker/dockerfile:experimental
+# syntax=docker/dockerfile:1.2
 
 FROM adoptopenjdk/openjdk11:jdk-11.0.16.1_1-slim as build
 COPY mvnw ./
@@ -7,6 +7,7 @@ COPY pom.xml ./
 COPY src src
 RUN chmod a+rx mvnw
 RUN ./mvnw clean
+RUN EXPORT DOCKER_BUILDKIT=1
 RUN --mount=type=cache,target=/root/.m2,rw ./mvnw package -DskipTests
 
 FROM adoptopenjdk/openjdk11:jdk-11.0.16.1_1-slim
