@@ -1,4 +1,4 @@
-# syntax=docker/dockerfile:1.2
+# syntax=docker/dockerfile:1.3
 
 FROM adoptopenjdk/openjdk11:jdk-11.0.16.1_1-slim as build
 COPY mvnw ./
