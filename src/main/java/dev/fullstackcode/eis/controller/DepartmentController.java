@@ -23,7 +23,6 @@ import java.util.Set;
 @RestController
 @RequestMapping("/department")
 public class DepartmentController {
-
     @Autowired
     DepartmentService departmentService;
 
