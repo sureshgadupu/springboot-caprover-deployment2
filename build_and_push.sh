@@ -23,7 +23,7 @@ env > /tmp/build_args
 echo "--build-arg \""`cat /tmp/build_args | sed -z 's/\n/" --build-arg "/g'`"IGNORE_VAR=IGNORE_VAR\"" >  /tmp/build_args
 
 BUILD_ARGS=`cat /tmp/build_args`
-COMMAND="docker buildx  build  --platform linux/amd64,linux/arm64 . -f $DOCKERFILE --push -t $FULL_IMAGE_NAME -t $IMAGE_NAME_WITH_REGISTRY:latest $BUILD_ARGS --no-cache ."
+COMMAND="docker buildx  build  --platform linux/amd64,linux/arm64 --push -t $FULL_IMAGE_NAME -t $IMAGE_NAME_WITH_REGISTRY:latest . -f $DOCKERFILE $BUILD_ARGS --no-cache ."
 
 echo "-------------------"
 echo "-------------------"
