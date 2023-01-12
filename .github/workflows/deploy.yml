@@ -29,8 +29,6 @@ jobs:
           password: ${{ secrets.DOCKER_TOKEN }}
       - name: Setup Docker buildx
         uses: docker/setup-buildx-action@v2
-        with:
-          use: linux/amd64,linux/arm64
       - name: Build and Push Release to DockerHub
         shell: bash
         run: ./build_and_push.sh
