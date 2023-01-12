@@ -4,7 +4,6 @@
 set -e
 pwd
 
-
 # ensure you're not running it on local machine
 if [ -z "$CI" ] || [ -z "$GITHUB_REF" ]; then
     echo "Running on a local machine! Exiting!"
