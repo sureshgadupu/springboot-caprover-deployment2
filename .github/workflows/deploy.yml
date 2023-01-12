@@ -2,7 +2,7 @@ name: Deploy APP
 
 env:
   IMAGE_NAME: sureshgkhyd/springboot-flyway-dbmigration
-  DOCKERFILE: Dockerfile.caprover
+  DOCKERFILE: Dockerfile
   CAPROVER_APP: springboot-caprover-deployment
   CAPROVER_HOST: https://captain.cr.fullstackdev.tk
   DOCKER_REGISTRY: docker.io
