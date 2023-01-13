@@ -35,7 +35,7 @@ jobs:
       - name: Deploy to CapRover
         uses: caprover/deploy-from-github@d76580d79952f6841c453bb3ed37ef452b19752c
         with:
-          host: ${{ env.CAPROVER_HOST }}
+          server: ${{ env.CAPROVER_HOST }}
           app: ${{ env.CAPROVER_APP }}
-          password: "${{ secrets.APP_TOKEN }}"
+          token: "${{ secrets.APP_TOKEN }}"
           image: "${{ env.FULL_IMAGE_NAME }}"
