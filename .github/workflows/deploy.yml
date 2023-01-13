@@ -33,7 +33,7 @@ jobs:
         shell: bash
         run: ./build_and_push.sh
       - name: Deploy to CapRover
-        uses: floms/action-caprover@v1
+        uses: caprover/deploy-from-github@d76580d79952f6841c453bb3ed37ef452b19752c
         with:
           host: ${{ env.CAPROVER_HOST }}
           app: ${{ env.CAPROVER_APP }}
