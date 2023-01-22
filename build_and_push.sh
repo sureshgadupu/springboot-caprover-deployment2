@@ -12,11 +12,7 @@ else
     echo "Running on CI"
 fi
 
-
-#cd $CONTEXT_DIR
 env
-# ls -lah
-
 # dump all env vars in a temp file and pass it as build args
 rm /tmp/build_args || echo OK
 env > /tmp/build_args
@@ -34,7 +30,5 @@ echo "-------------------"
 echo "-------------------"
 
 /bin/bash -c "$COMMAND"
-#docker push $IMAGE_NAME_WITH_REGISTRY:latest
-#docker push $FULL_IMAGE_NAME
 
 rm /tmp/build_args

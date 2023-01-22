@@ -1,10 +1,9 @@
 name: Deploy APP
 
 env:
-  IMAGE_NAME: sureshgkhyd/springboot-flyway-dbmigration
+  IMAGE_NAME: sureshgkhyd/springboot-caprover-deployment2
   DOCKERFILE: Dockerfile.caprover
-  CAPROVER_APP: springboot-caprover-deployment
-  CAPROVER_HOST: https://captain.cr.fullstackdev.tk
+  CAPROVER_APP: springboot-caprover-deployment2
   DOCKER_REGISTRY: docker.io
 
 on:
@@ -35,7 +34,7 @@ jobs:
       - name: Deploy to CapRover
         uses: caprover/deploy-from-github@d76580d79952f6841c453bb3ed37ef452b19752c
         with:
-          server: ${{ env.CAPROVER_HOST }}
+          server: "${{ secrets.CAPROVER_SERVER }}"
           app: ${{ env.CAPROVER_APP }}
           token: "${{ secrets.APP_TOKEN }}"
           image: "${{ env.FULL_IMAGE_NAME }}"

@@ -1,5 +1,4 @@
 FROM adoptopenjdk/openjdk11:jdk-11.0.16.1_1-slim as build
-ENV DOCKER_BUILDKIT=1
 COPY mvnw ./
 COPY .mvn .mvn
 COPY pom.xml ./

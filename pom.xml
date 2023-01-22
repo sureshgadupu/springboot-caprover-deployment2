@@ -9,9 +9,9 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>dev.fullstackcode.eis</groupId>
-	<artifactId>springboot-flyway-dbmigration</artifactId>
+	<artifactId>springboot-caprover-deployment2</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>springboot-flyway-dbmigration</name>
+	<name>springboot-caprover-deployment2</name>
 	<description>Demo project for Spring Boot</description>
 	<properties>
 		<java.version>11</java.version>
